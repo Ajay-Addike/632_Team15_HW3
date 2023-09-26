@@ -55,6 +55,33 @@ let array = [
     
   ];
 
+  let cartItemsArray = [];
+
+  function addItemToCartArray(obj){
+    let cartItem = cartItemsArray.forEach(element => {
+        if(element.item == obj.item){
+            element.count++;
+            return element;}
+    });
+
+    if(!cartItem){
+        cartItem = {...obj, count : 1};
+        cartItemsArray.push(cartItem);
+    }
+  }
+
+  function getCartItem(itemName){
+    for(let item of cartItemsArray){
+        if(item.item == itemName){
+            return item;
+        }
+    }
+  }
+
+  function inCartBtnText(cartDetails){
+    return ((cartDetails ? (cartDetails.count > 99 ? "99+" : cartDetails.count) : 0) + " in Cart");
+  }
+
  function addtomenu(obj)
  {
     let costvalue =totalEle.textContent;
@@ -71,6 +98,14 @@ let array = [
      let buttonEle = document.createElement("button");
      buttonEle.textContent = "Add to Cart";
      buttonEle.classList.add("btn" , "btn-primary");
+
+     let cartDetails = null;
+     
+     let buttonEle2 = document.createElement("span");
+     buttonEle2.classList.add("btn" , "ml-2", "bg-transprent");
+     cartDetails = getCartItem(obj.item);
+     buttonEle2.textContent = inCartBtnText(cartDetails);
+
      buttonEle.addEventListener("click" , function()
      {
         let parsednumber = parseInt(numberElement.textContent);
@@ -97,6 +132,9 @@ let array = [
         numberpara.textContent ="1";
         numberpara.classList.add("h5-element");
         spanElement.classList.add("h5-element");
+
+        addItemToCartArray(obj);
+
         let minusElement = document.createElement("button");
         minusElement.textContent = "-";
         minusElement.classList.add("signbutton")
@@ -141,14 +179,20 @@ let array = [
         liElement.appendChild(plusElement);
         liElement.classList.add("d-flex", "flex-row","mb-3");
         cartItemsEle.appendChild(liElement);
+
+        cartDetails = getCartItem(obj.item);
+        buttonEle2.textContent = inCartBtnText(cartDetails);
      })
      imageEle.src = imageUrl;
+     
+
      divelement1.classList.add("col-12", "col-md-6", "col-lg-3" , "mb-3");
      divelement2.classList.add("explore-menu-card", "shadow", "mb-3" );
      imageEle.classList.add("w-100","image-border" , );
      divelement2.appendChild(imageEle);
      divelement2.appendChild(headerEle);
      divelement2.appendChild(buttonEle);
+     divelement2.appendChild(buttonEle2);
      divelement1.appendChild(divelement2);
      exp.appendChild(divelement1);
     
