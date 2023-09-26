@@ -4,6 +4,10 @@
     height: 70px;
     width: 80px;
 }
+.anc 
+{
+    color : white;
+}
 .yellow-cart
 {
     background-color: #183b56;
@@ -351,6 +355,10 @@
     z-index: 20;
     text-align: center;
   }
+  .x
+  {
+    margin-top: 15px;
+  }
 
   .p1{
     font-style: italic;
@@ -363,6 +371,7 @@
     font-weight: 900;
     font-size: x-large;
     border-color: #F04A49;
+    text-align: center;
     /* border: 3px solid #F04A49; */
   }
   #popup:after {

@@ -9,12 +9,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/4f8ad6ec6b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/37a7a8c06d.js" crossorigin="anonymous"></script>s
     <link rel="stylesheet" type="text/css" href="index.css"></link> 
 </head>
 
 <body>
-    <div class="container-fluid ">
+    <div class="container-fluid " id="Gotop">
         <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top ">
             <a class="navbar-brand" href="#">
                 <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png" class="image" />
@@ -184,12 +184,18 @@
                             <div class="popup" id="popup">
                                 <p class="p1" >PROMO CODE</p>
                                 <br/>
-                                <p class="p2" id="p2">FOOD MUNCH 25</p>
+                                <input type = "text" class="p2 " id="p2" readonly value = "foodMunch25"/>
+                                <label for = "p2">
+                                    <i class="fa-regular fa-copy fa-bounce fa-2xl" onclick="copyToClipboard('#p2')" id="copyicon"></i>
+                                </label>
+                                <p id="copystatus">
+
+                                </p>
                                 <br/>
                                 <br/>
                                 <div>
                                     <button id="closeBTN" class="btn btn-secondary"  onclick="hide('popup')">Close</button>
-                                    <button id="promoBTN" class="btn btn-primary" onclick="copyToClipboard('#p2')">Copy</button>
+                                    
                                 </div>
                                 <br/>
                                 <br/>
@@ -230,15 +236,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="image" />
+                    
+                    <a href="#Gotop">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="image" />
+                    </a>
                     <h1 class="footer-section-mail-id">orderfood@foodmunch.com</h1>
                     <p class="footer-section-address">
                         George Mason University Fairfax, Virgina
                     </p>
+                    <a href="https://www.youtube.com/" target="_blank" class="mr-3  ">
+                        HELP
+                    </a> 
+                    
                 </div>
             </div>
         </div>
     </div>
+       
     <nav class="container fixed-bottom text-right mb-5  " id="cart">
         <div class="d-flex flex-column justify-content-center">
             
@@ -260,7 +274,14 @@
 
         </div>
         <div class="checkOut mt-5">
-            <div id ="total" class="total">0</div>
+            
+            <div class="total" value = 0>
+                <span>$</span>
+                <p id="total" class="x" >
+                    0
+                </p>
+            </div>
+            
             <div class="closeShopping">Close</div>
         </div>
     </nav>
