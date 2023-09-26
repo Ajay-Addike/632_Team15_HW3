@@ -353,7 +353,7 @@
     top: 50%;
     margin-top: -100px;
     background: #FFF;
-    border: 3px solid #F04A49;
+    border: 3px solid black;
     z-index: 20;
     text-align: center;
   }
@@ -372,7 +372,7 @@
     font-style: oblique;
     font-weight: 900;
     font-size: x-large;
-    border-color: #F04A49;
+    border-color: black;
     text-align: center;
     /* border: 3px solid #F04A49; */
   }
@@ -394,7 +394,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: lightyellow;
+    background: #fff;
     z-index: -1;
   }
 
