@@ -13,6 +13,7 @@ let buttonelement = document.getElementById("button1");
 let exp = document.getElementById("addhere");
 let iconELement = document.getElementById("copyicon");
 let copystatusEle = document.getElementById("copystatus");
+let wholecart = document.getElementById("cart");
 
 $ = function(id) {
     return document.getElementById(id);
@@ -167,7 +168,7 @@ let array = [
 
 
 
-openShopping.addEventListener('click', ()=>{
+wholecart.addEventListener('click', ()=>{
     body.classList.add('active');
     openShopping.classList.add("none");
     quantity.classList.add("none");
