@@ -5,6 +5,7 @@ let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
+let quantity1 = document.querySelector('.quantity1');
 let cartItemsEle = document.getElementById("cart-items");
 let totalEle = document.getElementById("total");
 let valueElement = document.getElementById("value");
@@ -53,12 +54,7 @@ let array = [
     },
     
   ];
-  
 
-  
-
- 
- 
  function addtomenu(obj)
  {
     let costvalue =totalEle.textContent;
@@ -172,6 +168,7 @@ wholecart.addEventListener('click', ()=>{
     body.classList.add('active');
     openShopping.classList.add("none");
     quantity.classList.add("none");
+    quantity1.classList.add("none");
     
     
 })
@@ -179,6 +176,7 @@ closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
     openShopping.classList.remove("none");
     quantity.classList.remove("none");
+    quantity1.classList.remove("none"); 
 })
 
 

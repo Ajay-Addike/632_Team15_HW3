@@ -10,8 +10,21 @@
 }
 .yellow-cart
 {
-    background-color: #183b56;
+    background-color:#183b56;
+   
     border-radius: 10px;
+    color: #fbf309;
+    padding-right: 100px;
+    cursor: pointer;
+    
+    
+    
+    
+
+}
+.logo 
+{
+    
 }
 
 .image2 {
@@ -204,9 +217,10 @@
 .shopping
 {
     height: 60px;
-    width: 60px;
+    width: 110px;
     padding: 10px;
     margin-bottom: 4px;
+    text-align: center;
 }
 
 .quantity
@@ -219,9 +233,19 @@
     width: 20px;
     align-self: flex-start; /* Position the '0' above the cart */
     position: absolute; /* Use absolute positioning */
-    margin-top: -15px; /* Adjust this value to position it precisely */
-    margin-left: 22px; /* Adjust this value to position it precisely */
+    margin-top: -18px; /* Adjust this value to position it precisely */
+    margin-left: 48px; /* Adjust this value to position it precisely */
     cursor: pointer;
+    
+}
+
+.quantity1
+{
+    color: yellow;
+    margin-top: 18px; /* Adjust this value to position it precisely */
+    margin-left: -30px;
+    cursor: pointer;
+    margin-right: 10px;
     
 }
 .span-div
@@ -246,6 +270,10 @@
     transition: 0.2s;
     
     
+}
+.width
+{
+    width: 200px;
 }
 .active .card{
     left: calc(100% - 500px);
