@@ -16,11 +16,9 @@
     color: #fbf309;
     padding-right: 100px;
     cursor: pointer;
-    
-    
-    
-    
-
+}
+html{
+    scroll-padding-top: 95px;
 }
 
 .image2 {
